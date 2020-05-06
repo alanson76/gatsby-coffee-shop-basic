@@ -13,8 +13,12 @@ const getProducts = graphql`
           price
           image {
             fluid(maxHeight: 426) {
-              src
               ...GatsbyContentfulFluid_tracedSVG
+            }
+          }
+          image {
+            fixed(width: 50, height: 50) {
+              src
             }
           }
         }
