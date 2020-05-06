@@ -6,7 +6,6 @@ import SEO from '../components/seo';
 //my components
 import Layout from '../components/layout';
 import BackgroundSection from '../components/Globals/BackgroundSection';
-import Info from '../components/Home/Info';
 
 const AboutPage = ({data}) => (
   <Layout>
@@ -23,7 +22,7 @@ export const query = graphql`
   {
     img: file(relativePath: {eq: "about-background.jpeg"}) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 1000, quality: 70) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
