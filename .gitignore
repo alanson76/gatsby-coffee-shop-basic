@@ -5,6 +5,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+//credential
+.evn.*
+
 # Runtime data
 pids
 *.pid
