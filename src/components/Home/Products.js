@@ -27,7 +27,7 @@ const getProducts = graphql`
   }
 `;
 
-const Products = () => {
+const Products = (props) => {
   return (
     <StaticQuery
       query={getProducts}
@@ -38,7 +38,13 @@ const Products = () => {
               <Title title='Our Products' />
               <div className='row'>
                 {data.products.edges.map(({node: product}) => {
-                  return <Product key={product.id} product={product} />;
+                  return (
+                    <Product
+                      key={product.id}
+                      product={product}
+                      onUpdateCart={props.onUpdateCart}
+                    />
+                  );
                 })}
               </div>
             </div>

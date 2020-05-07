@@ -7,7 +7,8 @@ yarn-error.log*
 
 #credential
 .env.development
-.env.production
+.env*
+.env*.*
 
 # Runtime data
 pids

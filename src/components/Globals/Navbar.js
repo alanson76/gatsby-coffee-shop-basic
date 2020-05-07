@@ -6,6 +6,10 @@ import {FaCartArrowDown} from 'react-icons/fa';
 import logo from '../../images/logo.svg';
 
 export default class Navbar extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   state = {
     navbarOpen: false,
     css: 'collapse navbar-collapse',
@@ -60,9 +64,10 @@ export default class Navbar extends Component {
               );
             })}
 
-            <li className='nav-tem ml-md-5'>
+            <li className='nav-item ml-md-5'>
               <FaCartArrowDown className='cart-icon snipcart-checkout' />
             </li>
+            <li className='nav-item ml-2'>{this.props.anyNew}</li>
           </ul>
         </div>
       </nav>

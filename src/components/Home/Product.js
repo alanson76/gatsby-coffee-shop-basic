@@ -1,7 +1,8 @@
 import React from 'react';
 import Img from 'gatsby-image';
 
-const Product = ({product}) => {
+
+const Product = ({product, onUpdateCart}) => {
   return (
     <div className='col-10 col-sm-8 col-md-6 col-lg-4 mx-auto my-y'>
       <div className='card' style={{minHeight: '100%'}}>
@@ -16,6 +17,8 @@ const Product = ({product}) => {
             data-item-price={product.price}
             data-item-url='https://alanson-gatsby-coffee-shop-basic.netlify.app'
             data-item-image={product.image.fixed.src}
+
+            onClick={() => onUpdateCart()}
           >
             add to cart
           </button>
